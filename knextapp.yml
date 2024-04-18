@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: knextapp
+spec:
+  containers:
+    - image: knextapp:1.0.0
+      name: knextapp
+      ports:
+        - containerPort: 8080
+          protocol: TCP
