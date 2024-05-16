@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: knextapp-ingress
+spec:
+  rules:
+    - host: nextapp.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: myknappsvc-nodeport
+                port:
+                  number: 8080
