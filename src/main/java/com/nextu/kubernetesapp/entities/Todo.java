@@ -16,6 +16,7 @@ public class Todo {
     @Id
     private String id;
     private String description;
+    private String fileId;
 
     @Override
     public String toString() {
