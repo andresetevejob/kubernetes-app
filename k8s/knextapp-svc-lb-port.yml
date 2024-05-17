@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: myknappsvc-nodeport
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
-    - port: 80
+    - port: 81
       targetPort: 8080
-      nodePort: 30123
   selector:
     app: myknappod
